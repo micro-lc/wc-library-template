@@ -1,13 +1,11 @@
 import { html, LitElement, unsafeCSS } from "lit";
-import { customElement, property, query, state } from "lit/decorators.js";
+import { customElement, property, state } from "lit/decorators.js";
 
 import style from './style.css?inline'
 
 @customElement('test-component')
-export class TestComponent extends LitElement {
+class _ extends LitElement {
   static styles = unsafeCSS(style)
-
-  @query('span') span!: HTMLSpanElement
 
   @state() protected _content?: string
   

@@ -6,6 +6,7 @@
     "moduleResolution": "Bundler",
     "noEmit": false,
     "esModuleInterop": true,
+    "useDefineForClassFields": false,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

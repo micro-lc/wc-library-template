@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Webcomponents</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module" src="/src/index.ts"></script>
+    <script type="module">
+      import {ReplaySubject} from 'rxjs'
+      import {render, createPool} from '@micro-lc/composer'
+
+      (async function () {
+        const root = document.getElementById('root')
+
+        render(
+          {
+            content: [
+              {tag: 'custom-button'},
+              {tag: 'custom-counter'},
+              {
+                tag: 'test-component',
+                properties: {
+                  content: 'Hello 👋'
+                }
+              }
+            ],
+          },
+          root,
+          {
+            eventBus: createPool()
+          }
+        )
+      })()
+    </script>
+  </body>
+</html>

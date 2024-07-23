@@ -4,17 +4,19 @@ import {defineConfig} from 'vite'
 
 import settings from './settings.json'
 
-export default defineConfig({
+export default defineConfig(({mode}) => ({
   base: './',
   build: {
     chunkSizeWarningLimit: 3000,
     cssCodeSplit: false,
+    modulePreload: mode !== 'min',
     rollupOptions: {
+      external: mode === 'min' ? ['react', 'react-dom', 'rxjs'] : [],
       input: {
         'test-components': resolve(__dirname, 'src/index.ts'),
       },
       output: {
-        entryFileNames: ({name}) => `${name}.esm.js`,
+        entryFileNames: ({name}) => `${name}.${mode === 'min' ? "min." : ""}esm.js`,
       }
     },
     outDir: 'dist',
@@ -26,6 +28,5 @@ export default defineConfig({
     charset: 'utf8',
     legalComments: 'none',
     target: settings.target,
-  },
-  preview: { host: true, cors: true, port: 3011 },
-})
+  }
+}))
