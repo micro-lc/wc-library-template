@@ -1,0 +1,1 @@
+# wc-library-template
