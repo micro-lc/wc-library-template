@@ -8,7 +8,8 @@
     "start": "vite",
     "build": "vite build --mode production",
     "preview": "vite preview",
-    "lint": "eslint . --ext ts,tsx --ignore-path .gitignore"
+    "lint": "eslint . --ext ts,tsx --ignore-path .gitignore",
+    "test": "echo \"TODO\""
   },
   "dependencies": {
     "@micro-lc/back-kit-engine": "^1.0.18",
