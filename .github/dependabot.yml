@@ -9,3 +9,12 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    ignore:
+       - dependency-name: "react:*"
+         versions: [ ">=17" ]
+       - dependency-name: "react-dom:*"
+         versions: [ ">=17" ]
+       - dependency-name: "lit:*"
+         versions: [ ">=2" ]
+       - dependency-name: "eslint:*"
+         versions: [ ">=8" ]
