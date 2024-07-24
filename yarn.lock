@@ -247,19 +247,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit-labs/ssr-dom-shim@npm:^1.0.0, @lit-labs/ssr-dom-shim@npm:^1.1.0":
+"@lit-labs/ssr-dom-shim@npm:^1.2.0":
   version: 1.2.0
   resolution: "@lit-labs/ssr-dom-shim@npm:1.2.0"
   checksum: 10/33679defe08538ac6fb612854e7d32b4ea1e787cceba2c3373d26fd56baa9833881887da7bade3930a176ba518dc00bb42ce95d82ddb6af6b05b8fbe1fc3169f
   languageName: node
   linkType: hard
 
-"@lit/reactive-element@npm:^1.3.0, @lit/reactive-element@npm:^1.6.0":
-  version: 1.6.3
-  resolution: "@lit/reactive-element@npm:1.6.3"
+"@lit/reactive-element@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "@lit/reactive-element@npm:2.0.4"
   dependencies:
-    "@lit-labs/ssr-dom-shim": "npm:^1.0.0"
-  checksum: 10/664c899bb0b144590dc4faf83b358b1504810eac107778c3aeb384affc65a7ef4eda754944bcc34a57237db03dff145332406345ac24da19ca37cf4b3cb343d3
+    "@lit-labs/ssr-dom-shim": "npm:^1.2.0"
+  checksum: 10/16aa5a8d917bce24d6c7cb5979f0a978e91f6205b4d9a8ebea2baf965e7a8215dab581b83b331123b04190612f4992ecc7b219cf00cf9b82f53403b08b1b6d49
   languageName: node
   linkType: hard
 
@@ -2394,14 +2394,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit-element@npm:^3.3.0":
-  version: 3.3.3
-  resolution: "lit-element@npm:3.3.3"
+"lit-element@npm:^4.0.4":
+  version: 4.0.6
+  resolution: "lit-element@npm:4.0.6"
   dependencies:
-    "@lit-labs/ssr-dom-shim": "npm:^1.1.0"
-    "@lit/reactive-element": "npm:^1.3.0"
-    lit-html: "npm:^2.8.0"
-  checksum: 10/7968e7f3ce3994911f27c4c54acc956488c91d8af81677cce3d6f0c2eaea45cceb79b064077159392238d6e43d46015a950269db9914fea8913566aacb17eaa1
+    "@lit-labs/ssr-dom-shim": "npm:^1.2.0"
+    "@lit/reactive-element": "npm:^2.0.4"
+    lit-html: "npm:^3.1.2"
+  checksum: 10/31b4400fbfdc5cfa1e4193434f4ed4fc28282dd13e2802c11a1533ad1135acf5c06ea1804e3720011873aefde927bdf02663d5290aa4e4dd6f96c90ee44109df
   languageName: node
   linkType: hard
 
@@ -2414,14 +2414,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit@npm:^2":
-  version: 2.8.0
-  resolution: "lit@npm:2.8.0"
+"lit-html@npm:^3.1.2":
+  version: 3.1.4
+  resolution: "lit-html@npm:3.1.4"
   dependencies:
-    "@lit/reactive-element": "npm:^1.6.0"
-    lit-element: "npm:^3.3.0"
-    lit-html: "npm:^2.8.0"
-  checksum: 10/aa64c1136b855ba328d41157dba67657d480345aeec3c1dd829abeb67719d759c9ff2ade9903f9cfb4f9d012b16087034aaa5b33f1182e70c615765562e3251b
+    "@types/trusted-types": "npm:^2.0.2"
+  checksum: 10/0f95b7e6fdd032a800ddaf1eebfdcb6c7482f9e455269506fe13f925db823798e8c73fc36980b89c546391138cd5025187529c7a0e813b07578f4e16012099f2
+  languageName: node
+  linkType: hard
+
+"lit@npm:^3":
+  version: 3.1.4
+  resolution: "lit@npm:3.1.4"
+  dependencies:
+    "@lit/reactive-element": "npm:^2.0.4"
+    lit-element: "npm:^4.0.4"
+    lit-html: "npm:^3.1.2"
+  checksum: 10/54799818821b66f121ab7f27909e1fd0937b2f9a36b32534804056920cb12d43f2e0bc7085021910c69d0a386cb68df4d04c2dae5b7a544395288b403f381a0e
   languageName: node
   linkType: hard
 
@@ -2501,6 +2510,31 @@ __metadata:
   checksum: 10/7268db63ed5169466540b6fb947aec313200bcf6d40c5ab722c22e242f651994619bcd85601602972d3c85bd2cc45a358a4c61937e9f11a061919a1da569b0c2
   languageName: node
   linkType: hard
+
+"mia_template_service_name_placeholder@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "mia_template_service_name_placeholder@workspace:."
+  dependencies:
+    "@mia-platform/eslint-config-mia": "npm:^3.0.0"
+    "@micro-lc/back-kit-engine": "npm:^1.0.18"
+    "@micro-lc/compose-toolkit": "npm:^0.1.3"
+    "@micro-lc/composer": "npm:^2.1.0"
+    "@types/node": "npm:^20.14.11"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:^18.3.0"
+    "@typescript-eslint/eslint-plugin": "npm:^7.17.0"
+    "@typescript-eslint/parser": "npm:^7.15.0"
+    eslint: "npm:^8.56.0"
+    eslint-plugin-react: "npm:^7.34.3"
+    handlebars: "npm:^4.7.8"
+    lit: "npm:^3"
+    react: "npm:^17"
+    react-dom: "npm:^17"
+    rxjs: "npm:^7.8.1"
+    typescript: "npm:^5.5.4"
+    vite: "npm:^5.3.4"
+  languageName: unknown
+  linkType: soft
 
 "micromatch@npm:^4.0.4":
   version: 4.0.7
@@ -3776,31 +3810,6 @@ __metadata:
   checksum: 10/bb7e377ebee67ae1c62a6f5be3923d80e192572003f51c4243193bb057c727588d2300ad6aeb824da46c94d531d37310802bfbedc75f2758503ff795ad14b333
   languageName: node
   linkType: hard
-
-"wc-library-template@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "wc-library-template@workspace:."
-  dependencies:
-    "@mia-platform/eslint-config-mia": "npm:^3.0.0"
-    "@micro-lc/back-kit-engine": "npm:^1.0.18"
-    "@micro-lc/compose-toolkit": "npm:^0.1.3"
-    "@micro-lc/composer": "npm:^2.1.0"
-    "@types/node": "npm:^20.14.11"
-    "@types/react": "npm:^18.3.3"
-    "@types/react-dom": "npm:^18.3.0"
-    "@typescript-eslint/eslint-plugin": "npm:^7.17.0"
-    "@typescript-eslint/parser": "npm:^7.15.0"
-    eslint: "npm:^8.56.0"
-    eslint-plugin-react: "npm:^7.34.3"
-    handlebars: "npm:^4.7.8"
-    lit: "npm:^2"
-    react: "npm:^17"
-    react-dom: "npm:^17"
-    rxjs: "npm:^7.8.1"
-    typescript: "npm:^5.5.4"
-    vite: "npm:^5.3.4"
-  languageName: unknown
-  linkType: soft
 
 "which-boxed-primitive@npm:^1.0.2":
   version: 1.0.2
