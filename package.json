@@ -2,14 +2,15 @@
   "name": "mia_template_service_name_placeholder",
   "version": "0.0.1",
   "type": "module",
-  "packageManager": "yarn@4.3.1",
+  "packageManager": "yarn@1.22.1",
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "start": "vite",
     "build": "vite build --mode production",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --ignore-path .gitignore",
-    "test": "echo \"TODO\""
+    "test": "echo \"TODO\"",
+    "coverage": "echo \"TODO\""
   },
   "dependencies": {
     "@micro-lc/back-kit-engine": "^1.0.18",
