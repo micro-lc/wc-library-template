@@ -1,4 +1,4 @@
-import type {Manifest} from '@micro-lc/compose-toolkit'
+import type { Manifest } from '@micro-lc/compose-toolkit'
 
 const manifest: Manifest = {
   docLink: '',
@@ -6,8 +6,8 @@ const manifest: Manifest = {
   example: JSON.stringify({
     'tag': 'bk-button',
     'properties': {
-      'content': 'CLICK ME!'
-    }
+      'content': 'CLICK ME!',
+    },
   }),
   properties: {
     disabled: {
@@ -17,9 +17,9 @@ const manifest: Manifest = {
         attribute: true,
         label: 'Disabled',
         description: 'Disables the button',
-      }
-    }
-  }
+      },
+    },
+  },
 }
 
 export default manifest

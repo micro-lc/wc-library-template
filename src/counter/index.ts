@@ -1,9 +1,9 @@
-import { html, unsafeCSS } from "lit";
-import { customElement, state } from "lit/decorators.js";
+import { customElement, state } from 'lit/decorators.js'
+import { html, unsafeCSS } from 'lit'
+import { BkBase } from '@micro-lc/back-kit-engine/base'
+import { click } from '../events/click'
+import { filter } from 'rxjs'
 import style from './style.css?inline'
-import { BkBase } from "@micro-lc/back-kit-engine/base";
-import { click } from "../events/click";
-import { filter } from "rxjs";
 
 @customElement('custom-counter')
 class _ extends BkBase {
@@ -11,7 +11,7 @@ class _ extends BkBase {
 
   @state() _counter = 0
 
-  constructor () {
+  constructor() {
     super(
       (eventBus) =>
         eventBus.pipe(filter(click.is)).subscribe(() => {
@@ -21,9 +21,9 @@ class _ extends BkBase {
   }
 
   protected render(): unknown {
-    return html`
-      <span>
-        ${this._counter}
+    return html `
+      <span class="custom-counter">
+        Count is: ${this._counter}
       </span>
     `
   }

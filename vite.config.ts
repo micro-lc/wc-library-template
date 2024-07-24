@@ -1,10 +1,9 @@
-import {resolve} from 'path'
-
-import {defineConfig} from 'vite'
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
 
 import settings from './settings.json'
 
-export default defineConfig(({mode}) => ({
+export default defineConfig(({ mode }) => ({
   base: './',
   build: {
     chunkSizeWarningLimit: 3000,
@@ -16,17 +15,17 @@ export default defineConfig(({mode}) => ({
         'test-components': resolve(__dirname, 'src/index.ts'),
       },
       output: {
-        entryFileNames: ({name}) => `${name}.${mode === 'min' ? "min." : ""}esm.js`,
-      }
+        entryFileNames: (chunk) => `${chunk.name}.${mode === 'min' ? 'min.' : ''}esm.js`,
+      },
     },
     outDir: 'dist',
     emptyOutDir: false,
     manifest: true,
-    minify: 'esbuild'
+    minify: 'esbuild',
   },
   esbuild: {
     charset: 'utf8',
     legalComments: 'none',
     target: settings.target,
-  }
+  },
 }))
