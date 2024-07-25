@@ -7,10 +7,11 @@ COPY src src
 COPY .yarnrc.yml .yarnrc.yml
 COPY package.json package.json
 COPY settings.json settings.json
+COPY tsconfig.json tsconfig.json
 COPY vite.config.ts vite.config.ts
 COPY yarn.lock yarn.lock
 
-RUN yarn install --immutable
+RUN yarn install --frozen-lockfile
 RUN yarn build
 
 ########################################################################################################################
