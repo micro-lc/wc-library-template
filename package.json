@@ -7,6 +7,7 @@
   "scripts": {
     "start": "vite",
     "build": "vite build --mode production",
+    "build-min": "vite build --mode min",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --ignore-path .gitignore",
     "test": "echo \"TODO\"",
