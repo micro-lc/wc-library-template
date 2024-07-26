@@ -33,7 +33,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.34.3",
     "typescript": "^5.5.4",
-    "vite": "^5.3.4"
+    "vite": "^5.3.5"
   },
   "engines": {
     "node": ">=v20"
