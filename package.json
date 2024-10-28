@@ -2,7 +2,7 @@
   "name": "mia_template_service_name_placeholder",
   "version": "0.0.1",
   "type": "module",
-  "packageManager": "yarn@1.22.1",
+  "packageManager": "yarn@1.22.18",
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "start": "vite",
@@ -11,7 +11,9 @@
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --ignore-path .gitignore",
     "test": "echo \"TODO\"",
-    "coverage": "echo \"TODO\""
+    "coverage": "echo \"TODO\"",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@micro-lc/back-kit-engine": "^1.0.18",
@@ -22,9 +24,16 @@
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
     "@mia-platform/eslint-config-mia": "^3.0.0",
     "@micro-lc/compose-toolkit": "^0.2.0",
     "@micro-lc/composer": "^2.1.0",
+    "@storybook/addon-essentials": "^8.3.6",
+    "@storybook/addon-links": "^8.3.6",
+    "@storybook/blocks": "^8.3.6",
+    "@storybook/test": "^8.3.6",
+    "@storybook/web-components": "^8.3.6",
+    "@storybook/web-components-vite": "^8.3.6",
     "@types/node": "^22.5.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -32,6 +41,8 @@
     "@typescript-eslint/parser": "^7.18.0",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-storybook": "^0.10.1",
+    "storybook": "^8.3.6",
     "typescript": "^5.5.4",
     "vite": "^5.4.2"
   },

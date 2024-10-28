@@ -7,7 +7,8 @@ module.exports = {
   extends: [
     "@mia-platform/eslint-config-mia",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:storybook/recommended"
   ],
   ignorePatterns: [
     ".eslintrc.cjs",
