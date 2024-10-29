@@ -3,7 +3,7 @@ import { customElement, property, state } from 'lit/decorators.js'
 
 import style from './style.css?inline'
 
-@customElement('custom-typography')
+@customElement('wc-title')
 class _ extends LitElement {
   static styles = unsafeCSS(style)
 
@@ -16,9 +16,9 @@ class _ extends LitElement {
 
   protected render(): unknown {
     return html `
-      <span class="custom-typography">
+      <h1 class="wc-title">
         ${this._content}
-      </span>
+      </h1>
     `
   }
 }

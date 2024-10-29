@@ -3,8 +3,8 @@ import '.'
 import type { Meta, StoryObj } from '@storybook/web-components'
 
 const meta: Meta = {
-  title: 'Typography',
-  component: 'custom-typography',
+  title: 'Title',
+  component: 'wc-title',
   parameters: {
     docs: {
       description: {
@@ -20,6 +20,6 @@ export default meta
 
 export const Default: StoryObj = {
   args: {
-    content: 'This is your text...',
+    content: 'Hello, World!',
   },
 }
