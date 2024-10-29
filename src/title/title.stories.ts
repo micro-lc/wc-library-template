@@ -3,7 +3,7 @@ import '.'
 import type { Meta, StoryObj } from '@storybook/web-components'
 
 const meta: Meta = {
-  title: 'Title',
+  title: 'Components/Title',
   component: 'wc-title',
   parameters: {
     docs: {

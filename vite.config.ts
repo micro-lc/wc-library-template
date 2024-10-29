@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import settings from './settings.json'
-import svgr from 'vite-plugin-svgr'
 
 export default defineConfig(({ mode }) => ({
   base: './',
@@ -28,7 +27,4 @@ export default defineConfig(({ mode }) => ({
     legalComments: 'none',
     target: settings.target,
   },
-  plugins: [
-    svgr(),
-  ],
 }))

@@ -9,7 +9,7 @@ import style from './style.css?inline'
 class _ extends BkBase {
   static styles = unsafeCSS(style)
 
-  @state() _content = '{ }'
+  @state() _content = '[]'
 
   constructor() {
     super(
@@ -17,7 +17,7 @@ class _ extends BkBase {
         return eventBus
           .pipe(filter<BkEvent, BkEvent<DisplayDataPayload>>(displayData.is))
           .subscribe((nextEvent) => {
-            const data = nextEvent.payload.data[0] ?? {}
+            const data = nextEvent.payload.data ?? []
             this._content = JSON.stringify(data, null, 2)
           })
       }

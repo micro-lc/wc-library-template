@@ -1,19 +1,20 @@
-import Button, { type ButtonProps } from './RefreshButton'
+import Button, { type FetchDataButtonProps } from './FetchDataButton'
 import { customElement, query } from 'lit/decorators.js'
 import { BkComponent } from '@micro-lc/back-kit-engine/base'
 import type { PropsWithChildren } from 'react'
+import { fetchData } from '../events'
 import { html } from 'lit'
-import { refresh } from '../events'
 
-@customElement('wc-refresh')
-class _ extends BkComponent<PropsWithChildren<ButtonProps>> {
+@customElement('wc-fetch-data-button')
+class _ extends BkComponent<PropsWithChildren<FetchDataButtonProps>> {
   @query('#button-container') container!: HTMLDivElement
 
   constructor() {
     super(
       Button,
       () => ({
-        onClick: () => { this.eventBus?.next(refresh({})) },
+        children: 'Fetch data',
+        onClick: () => { this.eventBus?.next(fetchData({})) },
         container: this,
       })
     )

@@ -1,0 +1,29 @@
+import { Meta } from '@storybook/addon-docs'
+import { Markdown } from '@storybook/blocks'
+
+<Meta title="Clients/Pokemon API client" />
+
+# Pokemon API Client
+
+A client Web Component to interact with [PokéAPI](https://pokeapi.co/).
+
+It listens to `fetchData` event, calls the API, and emits the `displayData` event with the response data. 
+
+The client accepts the **following properties**:
+
+<Markdown>
+{`
+| Property     | Attribute |    Type    | Default | Description                      |
+| :----------- | :-------: | :--------: | :-----: | :------------------------------- |
+| \`offset\`   |     ✔️     | \`number\` |  \`0\`  | Offset to send in the request    |
+| \`pageSize\` |     ✔️     | \`number\` | \`25\`  | Page size to send in the request |
+`}
+</Markdown>
+
+---
+
+This component showcases:
+
+- how to build a Web Component client without render based of <a href="https://github.com/micro-lc/back-kit-engine" target="_blank">back-kit-engine</a> library,
+- how to listen to and emit events through <a href="https://micro-lc.io/docs/guides/applications/compose/#eventbus" target="_blank">micro-lc `eventBus`</a>, and
+- how to write a [Mia-Platform configurator](https://docs.mia-platform.eu/docs/microfrontend-composer/external-components/manifest)-compliant _manifest_.

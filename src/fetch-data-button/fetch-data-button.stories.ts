@@ -3,7 +3,7 @@ import type { Meta } from '@storybook/web-components'
 import { generateEventBus } from '../../.storybook/lib/utils'
 import { html } from 'lit'
 
-const description = `A button that emits a \`refresh\` event on click.
+const description = `A button that emits a \`fetch-data\` event on click.
         
 It showcases:
 
@@ -13,8 +13,8 @@ It showcases:
 `
 
 const meta: Meta = {
-  title: 'Refresh button',
-  component: 'wc-refresh',
+  title: 'Components/Fetch data button',
+  component: 'wc-fetch-data-button',
   parameters: {
     docs: {
       description: { component: description },
@@ -24,6 +24,6 @@ const meta: Meta = {
 
 export default meta
 
-const Template = () => html `<wc-refresh .eventBus=${generateEventBus()}></wc-refresh>`
+const Template = () => html `<wc-fetch-data-button .eventBus=${generateEventBus()}></wc-fetch-data-button>`
 
 export const Default = Template.bind({})

@@ -10,7 +10,7 @@ It showcases how to listen to a <a href="https://github.com/micro-lc/back-kit-en
 `
 
 const meta: Meta = {
-  title: 'JSON Viewer',
+  title: 'Components/JSON Viewer',
   component: 'wc-json-viewer',
   parameters: {
     docs: {
