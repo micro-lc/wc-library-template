@@ -20,7 +20,7 @@ class _ extends BkComponent<PropsWithChildren<FetchDataButtonProps>> {
     )
   }
 
-  protected createRenderRoot(): Element | ShadowRoot {
+  protected createRenderRoot() {
     return this
   }
 
