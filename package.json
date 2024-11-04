@@ -4,10 +4,13 @@
   "type": "module",
   "packageManager": "yarn@1.22.18",
   "license": "SEE LICENSE IN LICENSE",
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
   "scripts": {
     "start": "vite",
-    "build": "vite build --mode production",
-    "build-min": "vite build --mode min",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --ignore-path .gitignore",
     "test": "echo \"TODO\"",
@@ -27,6 +30,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.9.0",
+    "@mia-platform/console-types": "^0.24.1",
     "@mia-platform/eslint-config-mia": "^3.0.0",
     "@micro-lc/compose-toolkit": "^0.2.0",
     "@micro-lc/composer": "^2.1.0",

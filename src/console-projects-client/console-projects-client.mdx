@@ -1,0 +1,160 @@
+import { Meta } from '@storybook/addon-docs'
+import { Markdown } from '@storybook/blocks'
+
+<Meta title="Clients/Console projects client" />
+
+# Console projects client
+
+A client Web Component to interact with <a href="https://docs.mia-platform.eu/docs/console/project-configuration/" target="_blank">Mia-Platform Console projects</a> API.
+
+> 📄 **Note**
+>
+> This implementation is just meant to give a basic example to start developing custom clients for
+> <a href="https://console.cloud.mia-platform.eu/documentations/api-portal/#/api/" target="_blank">Mia-Platform API</a>.
+>
+
+```html
+<wc-console-projects-client></wc-console-projects-client>
+```
+
+This client listens to <a href="https://docs.mia-platform.eu/docs/microfrontend-composer/back-kit/events#change-query" target="_blank">back-kit `change-query` events</a>,
+calls Mia-Platform Console API to retrieve the list of user's projects, and emits the response data via a
+<a href="https://docs.mia-platform.eu/docs/microfrontend-composer/back-kit/events#display-data" target="_blank">back-kit `display-data` event</a>.
+
+> ⚠️ Warning
+>
+> To properly use the client you need to be **logged in Mia-Platform Console**, like you would in a
+> <a href="https://docs.mia-platform.eu/docs/console/company-configuration/extensions" target="_blank">composer page Console extension</a>.
+>
+
+
+The client does not accept any property.
+
+## Use in Mia-Platform Microfrontend Composer
+
+This example client is built to be fully compatible with 
+<a href="https://docs.mia-platform.eu/docs/microfrontend-composer/what-is" target="_blank">Mia-Platform Microfrontend Composer</a>
+and <a href="https://docs.mia-platform.eu/docs/microfrontend-composer/back-kit/overview" target="_blank">Back-Kit library</a>.
+It also exposes a <a href="https://docs.mia-platform.eu/docs/microfrontend-composer/external-components/manifest" target="_blank">manifest</a>
+for Mia-Platform composer configurator.
+
+It follows a simple 
+<a href="https://micro-lc.io/docs/guides/applications/compose" target="_blank">micro-lc composer page configuration</a>
+to showcase how the client could be integrated with back-kit.
+
+```json
+{
+  "definitions": {
+    "dataSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "label": "Name",
+          "type": "string",
+          "formOptions": {
+            "readOnly": true
+          },
+          "visualizationOptions": {
+            "sortable": false
+          }
+        },
+        "projectId": {
+          "type": "string",
+          "label": "ID",
+          "formOptions": {
+            "readOnly": true
+          },
+          "visualizationOptions": {
+            "sortable": false
+          }
+        },
+        "tenantName": {
+          "label": "Company",
+          "type": "string",
+          "formOptions": {
+            "readOnly": true
+          },
+          "visualizationOptions": {
+            "sortable": false
+          }
+        }
+      }
+    }
+  },
+  "content": {
+    "content": [
+      {
+        "content": [
+          {
+            "tag": "div",
+            "content": [
+              {
+                "properties": {
+                  "content": "My projects"
+                },
+                "tag": "bk-title"
+              },
+              {
+                "tag": "bk-refresh-button"
+              },
+              {
+                "tag": "div",
+                "attributes": {
+                  "style": "flex-grow: 1;"
+                }
+              }
+            ],
+            "attributes": {
+              "style": "display: flex; flex-direction: row; gap: 12px; align-items: center"
+            }
+          }
+        ],
+        "tag": "header",
+        "attributes": {
+          "style": "padding: 16px; background-color: white;"
+        }
+      },
+      {
+        "content": [
+          {
+            "properties": {
+              "dataSchema": {
+                "$ref": "#/definitions/dataSchema"
+              },
+              "maxLines": 8,
+              "primaryKey": "_id",
+              "disableRowSelectionChange": false,
+              "disableRowSelection": true
+            },
+            "tag": "bk-table"
+          },
+          {
+            "properties": {
+              "dataSchema": {
+                "$ref": "#/definitions/dataSchema"
+              },
+              "width": "70vw"
+            },
+            "tag": "bk-form-modal"
+          }
+        ],
+        "tag": "main",
+        "attributes": {
+          "style": "flex-grow: 1; background-color: #F4F9FF; padding: 20px; overflow-y: auto;"
+        }
+      },
+      {
+        "tag": "wc-console-projects-client"
+      }
+    ],
+    "tag": "div",
+    "attributes": {
+      "style": "width: 100%; height: 100%; display: flex; flex-direction: column; position: relative;"
+    }
+  },
+  "sources": [
+    "https://cdn.mia-platform.eu/backoffice/bk-web-components/1.5.9/dist/bk-web-components.esm.js",
+    "https://cdn.mia-platform.eu/demo/ck-web-components/dist/index.esm.js"
+  ]
+}
+```

@@ -3,11 +3,17 @@ import { Markdown } from '@storybook/blocks'
 
 <Meta title="Clients/Pokemon API client" />
 
-# Pokemon API Client
+# Pokemon API client
 
-A client Web Component to interact with [PokéAPI](https://pokeapi.co/).
+A client Web Component to interact with <a href="https://pokeapi.co/" target="_blank">PokéAPI</a>.
 
-It listens to `fetchData` event, calls the API, and emits the `displayData` event with the response data. 
+```html
+<wc-pokemon-api-client></wc-pokemon-api-client>
+```
+
+It listens to the custom `fetchData` event, calls the API, and emits the 
+<a href="https://docs.mia-platform.eu/docs/microfrontend-composer/back-kit/events#display-data" target="_blank">back-kit `displayData`</a>
+event with the response data. 
 
 The client accepts the **following properties**:
 
