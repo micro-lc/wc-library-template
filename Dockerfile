@@ -4,7 +4,7 @@ WORKDIR /builder
 
 COPY .yarn/releases .yarn/releases
 COPY src src
-COPY .yarnrc.yml .yarnrc.yml
+COPY .yarnrc .yarnrc
 COPY package.json package.json
 COPY settings.json settings.json
 COPY tsconfig.json tsconfig.json
@@ -16,18 +16,10 @@ RUN yarn build
 
 ########################################################################################################################
 
-FROM nginx:1.25.4-alpine
-
-RUN apk add --no-cache --upgrade \
-  # - stop vulnerabilities:package HIGH Vulnerability found in os package type (APKG) - libexpat (fixed in: 2.6.0-r0)(CVE-2023-52425 - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-52425)
-  libexpat=2.6.2-r0 \
-  # - stop vulnerabilities:package HIGH Vulnerability found in os package type (APKG) - libxml2 (fixed in: 2.11.7-r0)(CVE-2024-25062 - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-25062)
-  libxml2=2.11.7-r0 
+FROM nginx:1.27.2-alpine
 
 LABEL name="mia_template_service_name_placeholder" \
-      description="%CUSTOM_PLUGIN_SERVICE_DESCRIPTION%" \
-      eu.mia-platform.url="https://www.mia-platform.eu" \
-      eu.mia-platform.version="0.0.1"
+      description="%CUSTOM_PLUGIN_SERVICE_DESCRIPTION%"
 
 COPY nginx /etc/nginx
 
