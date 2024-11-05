@@ -428,10 +428,10 @@
   resolved "https://registry.npmjs.org/@mia-platform/eslint-config-mia/-/eslint-config-mia-3.0.0.tgz"
   integrity sha512-tJSbuoPm46YOLe8AXTdsIFA+6O+MFOK0Rrn5LeQYxZ5bs6V6bacsyppgo1KR8Op4+HPlwZj2BdFP286FgTiSAw==
 
-"@micro-lc/back-kit-engine@^1.0.19":
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/@micro-lc/back-kit-engine/-/back-kit-engine-1.0.19.tgz#fd251c1b07bc919a4f91b91c291ec18e1c4c7e82"
-  integrity sha512-eA4+Wp42DsbDPCjniqyTwL5CguMRve1H0PnlObCE4pl5hMkupJMMNGnyLi1Og7zFnjko+6C3bSHZZCAmFoBbbQ==
+"@micro-lc/back-kit-engine@^1.0.20":
+  version "1.0.20"
+  resolved "https://registry.yarnpkg.com/@micro-lc/back-kit-engine/-/back-kit-engine-1.0.20.tgz#7fd898b69391bdce83e595e34c6c21313e9f0484"
+  integrity sha512-6CBag4KtQCJ3jjNM7jQq0LhQ1UUlZxRdQOEudFeb3vOBpz8WBnRlyesnwqtl09ZyWdKrP15En8JuZULns25Svw==
   dependencies:
     query-string "^7.1.1"
     typedoc "0.22.11"
