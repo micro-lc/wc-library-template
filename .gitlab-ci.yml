@@ -1,0 +1,14 @@
+include:
+  - file: "/build/node/template-react-yarn.yml"
+    project: "platform/pipelines-templates"
+    ref: "master"
+
+default:
+  image: node:20-alpine
+
+variables:
+  IMAGE_NAME: mia_template_image_name_placeholder
+
+.docker-job:
+  variables:
+    COMMIT_SHA_FILEPATH: /etc/nginx/commit.sha

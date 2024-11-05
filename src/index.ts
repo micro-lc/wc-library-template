@@ -12,6 +12,7 @@ const componentsList = [
   'wc-title',
 ]
 
+/** @see https://docs.mia-platform.eu/docs/microfrontend-composer/external-components/overview#list-custom-components-in-components-explorer */
 export default {
   components: componentsList,
   libraryName: 'My Custom Components',
