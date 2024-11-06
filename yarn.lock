@@ -438,10 +438,10 @@
     uuid "^8.3.2"
     yargs "^17.5.1"
 
-"@micro-lc/compose-toolkit@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@micro-lc/compose-toolkit/-/compose-toolkit-0.2.1.tgz#df52f27645706c59c70b533cda6884376df32745"
-  integrity sha512-4bh0FkNo99zXb94ptOz0ECkLSxf9sV0+vk6lTs6LHvAQPz50IDkGsXWA1WoQk7e+quAxTuRwBXJeAyvM3bC0ow==
+"@micro-lc/compose-toolkit@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@micro-lc/compose-toolkit/-/compose-toolkit-0.2.2.tgz#ce52fa28684484c7e0d1f10ace15072e5856c823"
+  integrity sha512-JLWN5V3ppxyj8a7E/Y3JHuXukbf/o47TqxzP9+eUc1/z9Bxc5LxIgT8BxFB3qbHDiCdLnxQOlV4lg+RHEocKGw==
 
 "@micro-lc/composer@^2.2.0":
   version "2.2.0"

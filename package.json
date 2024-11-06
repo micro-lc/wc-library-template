@@ -32,7 +32,7 @@
   "devDependencies": {
     "@mia-platform/console-types": "^0.24.1",
     "@mia-platform/eslint-config-mia": "^3.0.0",
-    "@micro-lc/compose-toolkit": "^0.2.1",
+    "@micro-lc/compose-toolkit": "^0.2.2",
     "@micro-lc/composer": "^2.2.0",
     "@storybook/addon-essentials": "^8.4.1",
     "@storybook/addon-links": "^8.4.1",
